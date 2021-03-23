@@ -1,5 +1,20 @@
-``properties
+# 스프링부트 기준 application.properties 설정 방법
 
+## 포트 설정
+```properties
+server.port=8060
+```
+
+## 커넥션 설정
+```properties
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+```
+
+## 구동 및 종료 시 동작
+```properties
 # JPA가 생성한 SQL문을 콘솔에 표시해준다.
 spring.jpa.show-sql=true
 # 옵션에 따라 서버 실행 또는 종료시 테이블에 다음과 같은 동작을 한다.
@@ -12,4 +27,4 @@ spring.jpa.hibernate.ddl-auto=update
 # 위 hivernate에 의한 옵션 기능을 사용할지의 여부
 spring.jpa.generate-ddl=true
 
-``
+```
