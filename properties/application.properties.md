@@ -27,4 +27,7 @@ spring.jpa.hibernate.ddl-auto=update
 # 위 hivernate에 의한 옵션 기능을 사용할지의 여부
 spring.jpa.generate-ddl=true
 
+# 테이블 대문자 연동 (JPA Default는 소문자 테이블인듯)
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+spring.jpa.hibernate.naming.implicit-strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
 ```
