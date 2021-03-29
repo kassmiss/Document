@@ -1,0 +1,26 @@
+@파일의 기본적인 생성
+
+```java
+  File file = new File("F://test.html");
+
+  if(!file.exists()) {
+      try {
+          file.createNewFile();
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
+  }
+
+  try {
+      FileOutputStream fOut = new FileOutputStream(file);
+      OutputStreamWriter osw = new OutputStreamWriter(fOut);
+
+      osw.write("test");
+      osw.flush();
+      osw.close();
+  } catch (FileNotFoundException e) {
+      e.printStackTrace();
+  } catch (IOException e) {
+      e.printStackTrace();
+  }
+```
